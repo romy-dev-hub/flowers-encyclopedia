@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌸 Base styles */
+@layer base {
+  html, body {
+    @apply bg-pink-light text-gray-800 font-sans;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-pink-dark;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold mt-8 mb-4;
+  }
+
+  h3 {
+    @apply text-2xl font-medium mt-6 mb-3;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  a {
+    @apply text-pink-dark hover:underline;
+  }
+}
+
+/* 🌸 Components layer for reusable classes */
+@layer components {
+  .card {
+    @apply bg-white shadow-soft rounded-xl p-6 transition hover:shadow-lg;
+  }
+
+  .btn {
+    @apply inline-block bg-pink dark:bg-pink-dark text-white px-4 py-2 rounded-xl shadow-soft transition hover:bg-pink-dark;
+  }
+
+  .section {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+}
+
