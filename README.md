@@ -50,3 +50,53 @@ flowers-encyclopedia/
 ├── bun.lockb                   # bun lockfile
 ├── tsconfig.json
 └── tailwind.config.ts
+
+public/
+ └── images/
+      ├── logo.png
+      ├── hero-banner.jpg
+      ├── background-texture.png
+      ├── placeholder.jpg
+      │
+      ├── flowers/
+      │    ├── rose.jpg
+      │    ├── tulip.jpg
+      │    ├── sunflower.jpg
+      │    ├── orchid.jpg
+      │    ├── lily.jpg
+      │    ├── daffodil.jpg
+      │    ├── daisy.jpg
+      │    ├── cherry-blossom.jpg
+      │    ├── lotus.jpg
+      │    └── marigold.jpg
+      │
+      ├── seasons/
+      │    ├── spring.jpg
+      │    ├── summer.jpg
+      │    ├── autumn.jpg
+      │    └── winter.jpg
+      │
+      ├── meanings/
+      │    ├── love.jpg
+      │    ├── friendship.jpg
+      │    ├── peace.jpg
+      │    ├── gratitude.jpg
+      │    └── remembrance.jpg
+      │
+      ├── care/
+      │    ├── watering.jpg
+      │    ├── sunlight.jpg
+      │    ├── soil.jpg
+      │    ├── fertilizer.jpg
+      │    └── pruning.jpg
+      │
+      ├── gallery/
+      │    ├── gallery-1.jpg
+      │    ├── gallery-2.jpg
+      │    ├── gallery-3.jpg
+      │    └── ... (up to gallery-12.jpg)
+      │
+      └── about/
+           ├── author.jpg
+           ├── team-1.jpg
+           └── team-2.jpg
