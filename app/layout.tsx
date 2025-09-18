@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Merriweather } from "next/font/google";
-import "./../styles/globals.css";
+import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
