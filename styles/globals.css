@@ -1,50 +1,52 @@
 @import "tailwindcss";
 
-/* 🌸 Base styles */
+/* Custom variables for your theme */
 @layer base {
+  :root {
+    --color-bg: #fff7f9;     /* very pale pink background */
+    --color-text: #3a2e2e;   /* deep brownish text for contrast */
+    --color-accent: #f9a8d4; /* soft pink accent */
+    --color-accent-dark: #ec4899; /* stronger pink */
+    --color-muted: #a78bfa;  /* lavender secondary */
+  }
+
   html, body {
-    @apply bg-pink-light text-gray-800 font-sans;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  h1, h2, h3, h4 {
-    @apply font-serif text-pink-dark;
-  }
-
-  h1 {
-    @apply text-4xl font-bold;
-  }
-
-  h2 {
-    @apply text-3xl font-semibold mt-8 mb-4;
-  }
-
-  h3 {
-    @apply text-2xl font-medium mt-6 mb-3;
-  }
-
-  p {
-    @apply mb-4;
-  }
-
-  a {
-    @apply text-pink-dark hover:underline;
+    height: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-/* 🌸 Components layer for reusable classes */
+/* Global typography tweaks */
 @layer components {
-  .card {
-    @apply bg-white shadow-soft rounded-xl p-6 transition hover:shadow-lg;
+  h1 {
+    @apply text-4xl md:text-5xl font-bold text-pink-800;
   }
-
-  .btn {
-    @apply inline-block bg-pink dark:bg-pink-dark text-white px-4 py-2 rounded-xl shadow-soft transition hover:bg-pink-dark;
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold text-pink-700;
   }
-
-  .section {
-    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  h3 {
+    @apply text-2xl font-semibold text-pink-600;
+  }
+  p {
+    @apply leading-relaxed;
   }
 }
 
+/* Utility: buttons */
+@layer components {
+  .btn {
+    @apply inline-flex items-center rounded-full px-4 py-2 font-medium transition-colors;
+  }
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent-dark);
+  }
+}
