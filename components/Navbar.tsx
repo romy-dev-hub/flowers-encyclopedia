@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,8 +24,9 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 z-50 w-full bg-pink-100 shadow-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-pink-800">
-          🌸 Florisa
+        <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-pink-800">
+          <Image src="/images/logo.png" alt="Florisa logo" width={50} height={50} priority />
+          <span className="hidden sm:inline">Florisa</span>
         </Link>
 
         {/* Desktop menu */}
