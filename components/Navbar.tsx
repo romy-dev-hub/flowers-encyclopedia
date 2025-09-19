@@ -21,7 +21,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-pink-100 shadow-md">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-pink-800">
@@ -62,7 +62,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-pink-50 px-6 py-4 space-y-3 text-pink-700 font-medium"
+            className="md:hidden bg-white px-6 py-4 space-y-3 text-pink-700 font-medium"
           >
             {navLinks.map((link, idx) => (
               <motion.div
