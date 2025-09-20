@@ -37,7 +37,7 @@ export default function FlowersPage() {
   const colors = ['red', 'pink', 'white', 'yellow', 'orange', 'purple', 'blue', 'green'];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50 pt-20">
       {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-8">
