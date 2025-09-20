@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { FiSearch, FiFilter } from "react-icons/fi";
 import FlowerCard from "@/components/FlowerCard";
-import { flowers, searchFlowers, getFlowersBySeason, getFlowersByColor } from "@/lib/flowers";
+import { flowers, searchFlowers } from "@/lib/flowers";
 
 export default function FlowersPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -165,7 +165,7 @@ export default function FlowersPage() {
               No flowers found
             </h3>
             <p className="text-gray-600">
-              Try adjusting your search or filters to find what you're looking for.
+              Try adjusting your search or filters to find what you&apos;re looking for.
             </p>
           </div>
         )}

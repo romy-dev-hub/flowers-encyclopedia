@@ -1,7 +1,7 @@
 "use client";
 
-import { Suspense, useEffect, useMemo, useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Suspense, useMemo, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -13,7 +13,6 @@ type ParticlePointsProps = {
 function ParticlePoints({ src, density = 3 }: ParticlePointsProps) {
   const texture = useTexture(src);
   const pointsRef = useRef<THREE.Points>(null);
-  const { viewport } = useThree();
 
   // Generate particle positions and colors from image
   const { positions, colors, count } = useMemo(() => {
@@ -25,11 +24,11 @@ function ParticlePoints({ src, density = 3 }: ParticlePointsProps) {
 
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d")!;
-    const iw = (image as any).width;
-    const ih = (image as any).height;
+    const iw = (image as HTMLImageElement).width;
+    const ih = (image as HTMLImageElement).height;
     canvas.width = iw;
     canvas.height = ih;
-    ctx.drawImage(image as any, 0, 0);
+    ctx.drawImage(image as HTMLImageElement, 0, 0);
     const imgData = ctx.getImageData(0, 0, iw, ih).data;
 
     const positionsArray: number[] = [];
@@ -65,7 +64,7 @@ function ParticlePoints({ src, density = 3 }: ParticlePointsProps) {
   // animate subtle drift
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
-    const p = pointsRef.current as any;
+    const p = pointsRef.current;
     if (!p) return;
     p.rotation.z = Math.sin(t * 0.05) * 0.05;
     p.position.x = Math.sin(t * 0.2) * 0.05;
