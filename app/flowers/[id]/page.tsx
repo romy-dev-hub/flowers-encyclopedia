@@ -122,11 +122,14 @@ export default function FlowerPage({ params }: FlowerPageProps) {
                 <Link href={`/flowers/${relatedFlower.id}`} className="block">
                   <div className="relative h-32 bg-gradient-to-br from-pink-100 to-purple-100 rounded-lg mb-3 overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-4xl opacity-20">
-                        {relatedFlower.season === 'spring' && '🌸'}
-                        {relatedFlower.season === 'summer' && '🌻'}
-                        {relatedFlower.season === 'fall' && '🍂'}
-                        {relatedFlower.season === 'winter' && '❄️'}
+                      <div className="text-4xl">
+                        <Image
+                          src={relatedFlower.images.cover}
+                          alt={relatedFlower.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                   </div>

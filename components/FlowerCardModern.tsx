@@ -2,8 +2,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface FlowerCardProps {
   flower: any;
@@ -23,15 +23,14 @@ export default function FlowerCard({ flower, index, viewMode }: FlowerCardProps)
       >
         <Link href={`/flowers/${flower.id}`} className="flex flex-col md:flex-row">
           {/* Image */}
-          <div className="relative md:w-1/3 h-48 bg-gradient-to-br from-pink-100 to-purple-100 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-6xl opacity-20">
-                {flower.season === 'spring' && '🌸'}
-                {flower.season === 'summer' && '🌻'}
-                {flower.season === 'fall' && '🍂'}
-                {flower.season === 'winter' && '❄️'}
-              </div>
-            </div>
+          <div className="relative md:w-1/3 h-48 overflow-hidden">
+            <Image
+              src={flower.images.cover}
+              alt={flower.name}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
             
             {/* Season badge */}
@@ -103,15 +102,13 @@ export default function FlowerCard({ flower, index, viewMode }: FlowerCardProps)
       <Link href={`/flowers/${flower.id}`}>
         <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 h-full">
           {/* Image */}
-          <div className="relative h-48 bg-gradient-to-br from-pink-100 to-purple-100 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-6xl opacity-20">
-                {flower.season === 'spring' && '🌸'}
-                {flower.season === 'summer' && '🌻'}
-                {flower.season === 'fall' && '🍂'}
-                {flower.season === 'winter' && '❄️'}
-              </div>
-            </div>
+          <div className="relative h-48 overflow-hidden">
+            <Image
+              src={flower.images.cover}
+              alt={flower.name}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
             
             {/* Season badge */}

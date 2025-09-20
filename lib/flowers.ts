@@ -19,6 +19,7 @@ export interface Flower {
   uses: string[];
   growingTips: string[];
   images: {
+    cover: string;
     main: string;
     variants: { color: string; image: string }[];
     details: string[];
@@ -59,6 +60,7 @@ export const flowers: Flower[] = [
       'Remove spent flowers to encourage more blooms'
     ],
     images: {
+      cover: '/flowers/rose/rose.jpg',
       main: '/flowers/rose/red-rose.jpg',
       variants: [
         { color: 'pink', image: '/flowers/rose/pink-rose.jpg' },
@@ -111,6 +113,7 @@ export const flowers: Flower[] = [
       'Allow foliage to die back naturally to nourish the bulb'
     ],
     images: {
+      cover: '/flowers/tulip/tulip.jpg',
       main: '/flowers/tulip/red-tulip.jpg',
       variants: [
         { color: 'yellow', image: '/flowers/tulip/yellow-tulip.jpg' },
@@ -163,6 +166,7 @@ export const flowers: Flower[] = [
       'Harvest seeds when the back of the flower head turns brown'
     ],
     images: {
+      cover: '/flowers/sunflower/sunflower.jpg',
       main: '/flowers/sunflower/yellow-sunflower.jpg',
       variants: [
         { color: 'orange', image: '/flowers/sunflower/orange-sunflower.jpg' },
@@ -213,6 +217,7 @@ export const flowers: Flower[] = [
       'Stake tall varieties to prevent breaking'
     ],
     images: {
+      cover: '/flowers/lily/lily.jpg',
       main: '/flowers/lily/white-lily.jpg',
       variants: [
         { color: 'pink', image: '/flowers/lily/pink-lily.jpg' },
@@ -264,6 +269,7 @@ export const flowers: Flower[] = [
       'Self-seeds readily in favorable conditions'
     ],
     images: {
+      cover: '/flowers/daisy/daisy.jpg',
       main: '/flowers/daisy/white-daisy.jpg',
       variants: [
         { color: 'pink', image: '/flowers/daisy/pink-daisy.jpg' },
@@ -314,6 +320,7 @@ export const flowers: Flower[] = [
       'Avoid getting water in the crown of the plant'
     ],
     images: {
+      cover: '/flowers/orchid/orchid.jpg',
       main: '/flowers/orchid/white-orchid.jpg',
       variants: [
         { color: 'pink', image: '/flowers/orchid/pink-orchid.jpg' },
@@ -365,6 +372,7 @@ export const flowers: Flower[] = [
       'Prune annually to prevent woody growth'
     ],
     images: {
+      cover: '/flowers/lavender/lavender.jpg',
       main: '/flowers/lavender/purple-lavender.jpg',
       variants: [
         { color: 'blue', image: '/flowers/lavender/blue-lavender.jpg' },
@@ -415,6 +423,7 @@ export const flowers: Flower[] = [
       'Avoid disturbing established plants'
     ],
     images: {
+      cover: '/flowers/peony/peony.jpg',
       main: '/flowers/peony/pink-peony.jpg',
       variants: [
         { color: 'white', image: '/flowers/peony/white-peony.jpg' },
@@ -466,6 +475,7 @@ export const flowers: Flower[] = [
       'Mulch to retain moisture and keep roots cool'
     ],
     images: {
+      cover: '/flowers/hydrangea/hydrangea.jpg',
       main: '/flowers/hydrangea/blue-hydrangea.jpg',
       variants: [
         { color: 'pink', image: '/flowers/hydrangea/pink-hydrangea.jpg' },
@@ -517,6 +527,7 @@ export const flowers: Flower[] = [
       'Disbud to produce larger exhibition-quality flowers'
     ],
     images: {
+      cover: '/flowers/dahlia/dahlia.jpg',
       main: '/flowers/dahlia/red-dahlia.jpg',
       variants: [
         { color: 'pink', image: '/flowers/dahlia/pink-dahlia.jpg' },
