@@ -79,7 +79,7 @@ export default function Navbar() {
                 <Link 
                   href={link.href} 
                   onClick={toggleMenu} 
-                  className="block hover:text-pink-900 flex items-center"
+                  className="hover:text-pink-900 flex items-center"
                 >
                   {link.icon && link.icon}
                   {link.label}
