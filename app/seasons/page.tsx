@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -10,8 +12,9 @@ export default function SeasonsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50 pt-20">
+      {/* Main content with top padding to account for fixed navbar */}
+      <div className="max-w-6xl mx-auto px-6 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,6 +53,15 @@ export default function SeasonsPage() {
           ))}
         </div>
       </div>
+      
+      <style jsx>{`
+        /* Additional padding for mobile devices */
+        @media (max-width: 768px) {
+          .min-h-screen {
+            padding-top: 5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }
