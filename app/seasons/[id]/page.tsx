@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getFlowersBySeason } from "@/lib/flowers";
-import FlowerCard from "@/components/FlowerCard";
+import FlowerCard from "@/components/FlowerCardModern";
 
 interface SeasonPageProps {
   params: {
@@ -45,7 +45,7 @@ export default function SeasonPage({ params }: SeasonPageProps) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {seasonFlowers.map((flower, index) => (
-            <FlowerCard key={flower.id} flower={flower} index={index} />
+            <FlowerCard key={flower.id} flower={flower} index={index} viewMode={"grid"} />
           ))}
         </div>
       </div>
