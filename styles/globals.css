@@ -50,3 +50,120 @@
     background-color: var(--color-accent-dark);
   }
 }
+
+.btn-primary:hover {
+  background-color: var(--color-accent-dark);
+}
+
+/* Animations for AnimatedBackground */
+@keyframes zoom {
+0%, 100% {
+  transform: scale(1.1);
+}
+50% {
+  transform: scale(1.15);
+}
+}
+
+@keyframes float-1 {
+0%, 100% {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 0.3;
+}
+50% {
+  transform: translateY(-20px) rotate(180deg);
+  opacity: 0.6;
+}
+}
+
+@keyframes float-2 {
+0%, 100% {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 0.2;
+}
+50% {
+  transform: translateY(-15px) rotate(-180deg);
+  opacity: 0.5;
+}
+}
+
+@keyframes float-3 {
+0%, 100% {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 0.4;
+}
+50% {
+  transform: translateY(-25px) rotate(90deg);
+  opacity: 0.7;
+}
+}s {
+h1 {
+  @apply text-4xl md:text-5xl font-bold text-pink-800;
+}
+h2 {
+  @apply text-3xl md:text-4xl font-semibold text-pink-700;
+}
+h3 {
+  @apply text-2xl font-semibold text-pink-600;
+}
+p {
+  @apply leading-relaxed;
+}
+}
+
+/* Utility: buttons */
+@layer components {
+.btn {
+  @apply inline-flex items-center rounded-full px-4 py-2 font-medium transition-colors;
+}
+.btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--color-accent-dark);
+}
+}
+
+/* Animations for AnimatedBackground */
+@keyframes zoom {
+0%, 100% {
+  transform: scale(1.1);
+}
+50% {
+  transform: scale(1.15);
+}
+}
+
+@keyframes float-1 {
+0%, 100% {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 0.3;
+}
+50% {
+  transform: translateY(-20px) rotate(180deg);
+  opacity: 0.6;
+}
+}
+
+@keyframes float-2 {
+0%, 100% {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 0.2;
+}
+50% {
+  transform: translateY(-15px) rotate(-180deg);
+  opacity: 0.5;
+}
+}
+
+@keyframes float-3 {
+0%, 100% {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 0.4;
+}
+50% {
+  transform: translateY(-25px) rotate(90deg);
+  opacity: 0.7;
+}
+}
