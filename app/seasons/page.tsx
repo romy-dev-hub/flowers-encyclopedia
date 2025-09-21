@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { flowers } from "@/lib/flowers";
 import { useState, useRef, useEffect } from "react";
-import SeasonCard from "@/components/SeasonCard"; 
+import SeasonCard from "@/components/SeasonCard";
 
 // Floating particles background component
 const FloatingParticles = () => {

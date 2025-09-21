@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import AnimatedBackground from "@/components/AnimatedBackgroundSimple";
-import FlowerCard from "@/components/FlowerCardModern";
+import FlowerCardModern from "@/components/FlowerCardModern";
 import { flowers } from "@/lib/flowers";
 
 export default function Home() {
@@ -65,7 +65,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredFlowers.map((flower, index) => (
-              <FlowerCard key={flower.id} flower={flower} index={index} viewMode={"grid"} />
+              <FlowerCardModern key={flower.id} flower={flower} index={index} viewMode={"grid"} />
             ))}
           </div>
 

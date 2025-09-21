@@ -1,4 +1,4 @@
-import FlowerCard from "@/components/FlowerCardModern";
+import FlowerCardModern from "@/components/FlowerCardModern";
 import { flowers } from "@/lib/flowers";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       
       <div className="max-w-md mx-auto">
-        <FlowerCard flower={testFlower} index={0} viewMode={"grid"} />
+        <FlowerCardModern flower={testFlower} index={0} viewMode={"grid"} />
       </div>
     </div>
   );

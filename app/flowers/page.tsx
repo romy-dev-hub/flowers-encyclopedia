@@ -4,7 +4,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiSearch, FiFilter, FiGrid, FiList } from "react-icons/fi";
-import FlowerCard from "@/components/FlowerCardModern";
+import FlowerCardModern from "@/components/FlowerCardModern";
 import { flowers, searchFlowers } from "@/lib/flowers";
 
 export default function FlowersPage() {
@@ -179,7 +179,7 @@ export default function FlowersPage() {
             "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" : 
             "space-y-6"}>
             {filteredFlowers.map((flower, index) => (
-              <FlowerCard 
+              <FlowerCardModern 
                 key={flower.id} 
                 flower={flower} 
                 index={index} 
