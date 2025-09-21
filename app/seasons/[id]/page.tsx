@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { getFlowersBySeason, flowers } from "@/lib/flowers";
-import FlowerCardModern from "../../../components/FlowerCardModern";
+import FlowerCard from "@/components/FlowerCardModern";
 
 interface SeasonPageProps {
   params: {
@@ -142,7 +142,7 @@ export default async function SeasonPage({ params }: SeasonPageProps) {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {seasonFlowers.slice(0, 6).map((flower, index) => (
-                <FlowerCardModern
+                <FlowerCard
                   key={flower.id} 
                   flower={flower} 
                   index={index} 
