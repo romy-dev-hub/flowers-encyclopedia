@@ -66,28 +66,28 @@ export default function SeasonCard({ season, index }: SeasonCardProps) {
             <div className={`p-4 rounded-lg bg-gradient-to-r ${colorClasses[season.name.toLowerCase() as keyof typeof colorClasses]} mb-4`}>
               <h3 className="font-semibold mb-2">Seasonal Tips</h3>
               <ul className="text-sm space-y-1">
-                {season.name === 'Spring' && (
+                {season.name.toLowerCase() === 'spring' && (
                   <>
                     <li>• Plant after last frost</li>
                     <li>• Perfect for tulips and daffodils</li>
                     <li>• Start seeds indoors</li>
                   </>
                 )}
-                {season.name === 'Summer' && (
+                {season.name.toLowerCase() === 'summer' && (
                   <>
                     <li>• Water early morning or evening</li>
                     <li>• Perfect for roses and sunflowers</li>
                     <li>• Provide afternoon shade</li>
                   </>
                 )}
-                {season.name === 'Fall' && (
+                {season.name.toLowerCase() === 'fall' && (
                   <>
                     <li>• Plant spring bulbs</li>
                     <li>• Perfect for chrysanthemums</li>
                     <li>• Prepare plants for winter</li>
                   </>
                 )}
-                {season.name === 'Winter' && (
+                {season.name.toLowerCase() === 'winter' && (
                   <>
                     <li>• Protect from frost</li>
                     <li>• Perfect for camellias</li>

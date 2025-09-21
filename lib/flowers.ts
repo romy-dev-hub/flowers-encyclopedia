@@ -554,7 +554,59 @@ export const flowers: Flower[] = [
       'The dahlia was named after Swedish botanist Anders Dahl',
       'Dahlia tubers were eaten as a food crop by the Aztecs'
     ]
-  }
+  },
+  {
+  id: 'chrysanthemum',
+  name: 'Chrysanthemum',
+  scientificName: 'Chrysanthemum morifolium',
+  family: 'Asteraceae',
+  season: 'fall',
+  colors: ['yellow', 'orange', 'red', 'purple', 'white', 'pink'],
+  meanings: ['friendship', 'joy', 'optimism', 'long life'],
+  care: {
+    sunlight: 'full',
+    water: 'medium',
+    soil: 'Well-draining, fertile soil with good organic matter',
+    fertilizer: 'Balanced fertilizer every 4-6 weeks during growing season',
+    pruning: 'Pinch back stems in spring to encourage bushiness'
+  },
+  description: 'Chrysanthemums are classic fall flowers known for their vibrant colors and abundant blooms. They symbolize friendship and joy, making them popular gifts and garden plants.',
+  history: 'Chrysanthemums were first cultivated in China as early as the 15th century BC. They were introduced to Japan in the 8th century AD, where they became the emblem of the emperor. They arrived in Europe in the 17th century and quickly gained popularity.',
+  uses: ['Ornamental gardening', 'Cut flowers', 'Tea production', 'Traditional medicine', 'Insect repellent'],
+  growingTips: [
+    'Plant in spring to establish roots before blooming in fall',
+    'Pinch back stems until mid-summer to encourage bushier plants',
+    'Divide plants every 2-3 years to maintain vigor',
+    'Protect from early frosts to extend blooming period'
+  ],
+  images: {
+    cover: '/flowers/chrysanthemum/chrysanthemum.jpg',
+    main: '/flowers/chrysanthemum/red-chrysanthemum.jpg',
+    variants: [
+      { color: 'yellow', image: '/flowers/chrysanthemum/yellow-chrysanthemum.jpg' },
+      { color: 'orange', image: '/flowers/chrysanthemum/orange-chrysanthemum.jpg' },
+      { color: 'purple', image: '/flowers/chrysanthemum/purple-chrysanthemum.jpg' },
+      { color: 'white', image: '/flowers/chrysanthemum/white-chrysanthemum.jpg' }
+    ],
+    details: [
+      '/flowers/chrysanthemum/chrysanthemum-detail-1.jpg',
+      '/flowers/chrysanthemum/chrysanthemum-detail-2.jpg'
+    ]
+  },
+  bloomTime: 'Late summer to fall',
+  height: '1-3 feet',
+  hardiness: 'Zones 5-9',
+  toxicity: 'Toxic to pets if ingested',
+  propagation: 'Division, cuttings',
+  nativeTo: 'Asia and northeastern Europe',
+  symbolism: 'Chrysanthemums symbolize friendship, joy, and longevity. In some cultures, they represent honesty and are associated with the sun.',
+  trivia: [
+    'Chrysanthemums are the official flower of Chicago',
+    'In Japan, the Chrysanthemum Throne is the name for the imperial throne',
+    'The name comes from Greek words "chrysos" (gold) and "anthemon" (flower)',
+    'Chrysanthemum tea is a popular beverage in many Asian cultures'
+  ]
+ }
 ];
 
 export const getFlowersBySeason = (season: string) => {

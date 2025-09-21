@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { flowers } from "@/lib/flowers";
 import SeasonCard from "@/components/SeasonCard";
+console.log("SeasonCard import is:", SeasonCard);
+
 
 export default function SeasonsPage() {
   const seasons = [
