@@ -1,11 +1,9 @@
 // app/seasons/[id]/page.tsx
-"use client";
-
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { getFlowersBySeason, flowers } from "@/lib/flowers";
-import FlowerCard from "@/components/FlowerCardModern";
+import FlowerCardModern from "@/components/FlowerCardModern";
 
 interface SeasonPageProps {
   params: {
@@ -13,8 +11,10 @@ interface SeasonPageProps {
   };
 }
 
-export default function SeasonPage({ params }: SeasonPageProps) {
-  const season = params.id.toLowerCase();
+export default async function SeasonPage({ params }: SeasonPageProps) {
+  // In Next.js 15, params is a Promise, so we need to await it
+  const { id } = await Promise.resolve(params);
+  const season = id.toLowerCase();
   const seasonFlowers = getFlowersBySeason(season);
   
   if (seasonFlowers.length === 0) {
@@ -142,10 +142,10 @@ export default function SeasonPage({ params }: SeasonPageProps) {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {seasonFlowers.slice(0, 6).map((flower, index) => (
-                <FlowerCard 
-                  key={flower.id} 
-                  flower={flower} 
-                  index={index} 
+                <FlowerCardModern
+                  key={flower.id}
+                  flower={flower}
+                  index={index}
                   viewMode="grid"
                 />
               ))}

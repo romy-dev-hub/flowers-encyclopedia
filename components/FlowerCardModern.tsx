@@ -11,7 +11,7 @@ interface FlowerCardProps {
   viewMode: "grid" | "list";
 }
 
-export default function FlowerCard({ flower, index, viewMode }: FlowerCardProps) {
+export default function FlowerCardModern({ flower, index, viewMode }: FlowerCardProps) {
   if (viewMode === "list") {
     return (
       <motion.div

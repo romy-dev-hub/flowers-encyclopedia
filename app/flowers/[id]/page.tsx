@@ -12,9 +12,10 @@ interface FlowerPageProps {
   };
 }
 
-export default function FlowerPage({ params }: FlowerPageProps) {
-  const flower = flowers.find(f => f.id === params.id);
-  
+export default async function FlowerPage({ params }: FlowerPageProps) {
+  const { id } = await Promise.resolve(params);
+  const flower = flowers.find(f => f.id === id);
+
   if (!flower) {
     notFound();
   }

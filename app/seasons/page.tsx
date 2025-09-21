@@ -124,7 +124,7 @@ export default function SeasonsPage() {
                   <div className="relative h-32 overflow-hidden">
                     <div 
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-                      style={{ backgroundImage: `url(${flower.images.main})` }}
+                      style={{ backgroundImage: `url(${flower.images.cover})` }}
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                     <div className="absolute top-2 right-2">
