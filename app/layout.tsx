@@ -1,9 +1,13 @@
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
   title: "Flowers Encyclopedia",
   description: "All about flowers 🌸",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
