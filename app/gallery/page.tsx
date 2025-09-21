@@ -199,7 +199,7 @@ export default function GalleryPage() {
     : galleryImages.filter(img => img.category === filter);
 
   // Get unique categories
-  const categories = ["all", ...new Set(galleryImages.map(img => img.category))];
+  const categories = ["all", ...Array.from(new Set(galleryImages.map(img => img.category)))];
 
   // Handle image click
   const handleImageClick = (image: any) => {
