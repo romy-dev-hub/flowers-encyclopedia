@@ -2,8 +2,6 @@
 
 A beautiful, interactive encyclopedia dedicated to flowers, built with modern web technologies. Discover flowers by season, meaning, and care requirements in this visually stunning application.
 
-[!background] (./public/images/background.jpg)
-
 ## 🌟 Features
 
 - ### Flower Catalog:
